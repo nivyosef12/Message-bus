@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9dd040a5-c777-47af-9c03-3e705c8049b7" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ki3OhseEqmbTlfdkMMmKAUY5jc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SPL211-Tester_Assignment_4-main" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="bgu.spl.mics" />
+      <recent name="bgu.spl.mics.application.passiveObjects" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.Main" />
+      <module name="spl211" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EwokTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spl211" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.application.passiveObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics.application.passiveObjects" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.passiveObjects.EwokTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EwokTest.acquire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spl211" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.application.passiveObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics.application.passiveObjects" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.passiveObjects.EwokTest" />
+      <option name="METHOD_NAME" value="acquire" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EwokTest.release" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spl211" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.application.passiveObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics.application.passiveObjects" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.passiveObjects.EwokTest" />
+      <option name="METHOD_NAME" value="release" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageBusImplTest.testSendEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spl211" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.MessageBusImplTest" />
+      <option name="METHOD_NAME" value="testSendEvent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.EwokTest" />
+        <item itemvalue="JUnit.MessageBusImplTest.testSendEvent" />
+        <item itemvalue="JUnit.EwokTest.release" />
+        <item itemvalue="JUnit.EwokTest.acquire" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dd040a5-c777-47af-9c03-3e705c8049b7" name="Default Changelist" comment="" />
+      <created>1606169556010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606169556010</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607876057461">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="451" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.923@67.27.1853.923" timestamp="1607876057461" />
+    <state x="801" y="195" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1606584843492">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="801" y="195" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/67.27.1853.923@67.27.1853.923" timestamp="1606584843492" />
+    <state x="743" y="355" width="500" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607873901510">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="743" y="355" width="500" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.923@67.27.1853.923" timestamp="1607873901510" />
+    <state x="726" y="236" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1606766343684">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="726" y="236" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/67.27.1853.923@67.27.1853.923" timestamp="1606766343684" />
+    <state x="776" y="245" width="424" height="484" key="FileChooserDialogImpl" timestamp="1610716856488">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="776" y="245" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.923@67.27.1853.923" timestamp="1610716856488" />
+    <state width="1807" height="545" key="GridCell.Tab.0.bottom" timestamp="1607891801785">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="545" key="GridCell.Tab.0.bottom/67.27.1853.923@67.27.1853.923" timestamp="1607891801785" />
+    <state width="1807" height="545" key="GridCell.Tab.0.center" timestamp="1607891801784">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="545" key="GridCell.Tab.0.center/67.27.1853.923@67.27.1853.923" timestamp="1607891801784" />
+    <state width="1807" height="545" key="GridCell.Tab.0.left" timestamp="1607891801782">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="545" key="GridCell.Tab.0.left/67.27.1853.923@67.27.1853.923" timestamp="1607891801782" />
+    <state width="1807" height="545" key="GridCell.Tab.0.right" timestamp="1607891801785">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="545" key="GridCell.Tab.0.right/67.27.1853.923@67.27.1853.923" timestamp="1607891801785" />
+    <state width="1807" height="292" key="GridCell.Tab.1.bottom" timestamp="1606489421083">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="292" key="GridCell.Tab.1.bottom/67.27.1853.923@67.27.1853.923" timestamp="1606489421083" />
+    <state width="1807" height="292" key="GridCell.Tab.1.center" timestamp="1606489421083">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="292" key="GridCell.Tab.1.center/67.27.1853.923@67.27.1853.923" timestamp="1606489421083" />
+    <state width="1807" height="292" key="GridCell.Tab.1.left" timestamp="1606489421083">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="292" key="GridCell.Tab.1.left/67.27.1853.923@67.27.1853.923" timestamp="1606489421083" />
+    <state width="1807" height="292" key="GridCell.Tab.1.right" timestamp="1606489421083">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state width="1807" height="292" key="GridCell.Tab.1.right/67.27.1853.923@67.27.1853.923" timestamp="1606489421083" />
+    <state x="691" y="158" width="670" height="522" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606327746232">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="691" y="158" width="670" height="522" key="com.intellij.testIntegration.createTest.CreateTestDialog/67.27.1853.923@67.27.1853.923" timestamp="1606327746232" />
+    <state x="656" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607883543825">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="656" y="225" width="672" height="678" key="search.everywhere.popup/67.27.1853.923@67.27.1853.923" timestamp="1607883543825" />
+  </component>
+</project>

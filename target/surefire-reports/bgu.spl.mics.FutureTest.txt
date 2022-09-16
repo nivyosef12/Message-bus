@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: bgu.spl.mics.FutureTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.013 s <<< FAILURE! - in bgu.spl.mics.FutureTest
+testGet  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at bgu.spl.mics.FutureTest.testGet(FutureTest.java:29)
+
+testResolve  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at bgu.spl.mics.FutureTest.testResolve(FutureTest.java:36)
+
+testIsDone  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at bgu.spl.mics.FutureTest.testIsDone(FutureTest.java:45)
+
+testGetWithTimeOut  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <foo>
+	at bgu.spl.mics.FutureTest.testGetWithTimeOut(FutureTest.java:55)
+

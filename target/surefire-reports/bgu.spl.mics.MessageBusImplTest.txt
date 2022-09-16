@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: bgu.spl.mics.MessageBusImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.016 s <<< FAILURE! - in bgu.spl.mics.MessageBusImplTest
+testComplete  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at bgu.spl.mics.MessageBusImplTest.testComplete(MessageBusImplTest.java:36)
+
+testSendBroadcast  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <bgu.spl.mics.application.messages.TerminateMissionBroadcast@44c8afef> but was: <null>
+	at bgu.spl.mics.MessageBusImplTest.testSendBroadcast(MessageBusImplTest.java:60)
+
+testSendEvent  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <bgu.spl.mics.application.messages.AttackEvent@12f41634> but was: <null>
+	at bgu.spl.mics.MessageBusImplTest.testSendEvent(MessageBusImplTest.java:79)
+
+testAwaitMessage  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <bgu.spl.mics.application.messages.AttackEvent@13c27452> but was: <null>
+	at bgu.spl.mics.MessageBusImplTest.testAwaitMessage(MessageBusImplTest.java:96)
+
