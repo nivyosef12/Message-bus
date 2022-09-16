@@ -7,7 +7,7 @@
                      "attacks": [
                                     {"serials":[int array], "duration": (int)}
                                                    .
-                                                   . (The numbers in the array range from 1 to (num of ewoks), and simulate the resources needed to carry out the attack)
+                                                   .
                                                    .
                                 ]
                      "R2D2":(int), 
@@ -16,3 +16,5 @@
                      "testId":(int),
                      "numOfAttacks":(int)
                  }
+                 
+***The numbers in the array range from 1 to (num of ewoks), and simulate the resources needed to carry out the attack***
