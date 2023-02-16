@@ -39,6 +39,7 @@ public class LeiaMicroservice extends MicroService {
             Diary.getInstance().setLeiaTerminate(System.currentTimeMillis());
             terminate();
         });
+
         try { // waits for all micro services to initialize before start sending events
             Main.countDownLatch.await();
         } catch (InterruptedException e) {
@@ -53,12 +54,14 @@ public class LeiaMicroservice extends MicroService {
             futureList.add(sendEvent(attackEvent));
             System.out.println("send attack event");
         }
+
+        // Leia waits for all attack events to terminate
         while (!futureList.isEmpty()) {
             Future<Boolean> future = futureList.get(0);
             future.get(); // if future is not resolved yet then Leia waits until it(future) is resolved
             futureList.remove(0);
         }
-        // System.out.println("send finished waiting" );
+
         DeactivationEvent deactivationEvent = new DeactivationEvent(r2D2DeactivationDuration);
         futureList.add(sendEvent(deactivationEvent));
         System.out.println("deactivate" );
@@ -67,6 +70,7 @@ public class LeiaMicroservice extends MicroService {
             future.get(); // if future is not resolved yet then Leia waits until it(future) is resolved
             futureList.remove(0);
         }
+
         BombDestroyerEvent bombDestroyerEvent = new BombDestroyerEvent(landoBombDuration);
         futureList.add((sendEvent(bombDestroyerEvent)));
         System.out.println("bomb");
@@ -75,7 +79,7 @@ public class LeiaMicroservice extends MicroService {
             future.get(); // if future is not resolved yet then Leia waits until it(future) is resolved
             futureList.remove(0);
         }
-        // System.out.println("terminate");
+
         TerminateMissionBroadcast terminateMissionBroadcast = new TerminateMissionBroadcast();
         sendBroadcast(terminateMissionBroadcast);
     }

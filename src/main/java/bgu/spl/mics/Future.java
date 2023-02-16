@@ -32,7 +32,8 @@ public class Future<T> {
 	public synchronized T get() {
 		while (!isDone){
 			try {
-				this.wait(); //waits until someone else (other Thread) will resolve this Future object
+				// busy wait until future is resolved
+				this.wait();
 			} catch (InterruptedException e){
 				e.printStackTrace();
 			}
@@ -46,7 +47,7 @@ public class Future<T> {
 	public synchronized void resolve (T result) {
 		this.result = result;
 		isDone = true;
-		this.notifyAll();  // "wakes up" all treads, if a thread waits in the get() method, now he can preform it
+		this.notifyAll();  // "wakes up" all treads that waits on this future
 	}
 	
 	/**
@@ -67,10 +68,10 @@ public class Future<T> {
      * 	       wait for {@code timeout} TimeUnits {@code unit}. If time has
      *         elapsed, return null.
      */
-	//TODO implement this method!!!!!!!!!!!!!!!!!!!!!!
 	public synchronized T get(long timeout, TimeUnit unit) {
 		while (!isDone) {
 			try {
+				// wait timeout seconds and ret result
 				wait(unit.toSeconds(timeout));
 				return result;
 			} catch (InterruptedException e) {

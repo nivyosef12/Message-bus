@@ -7,7 +7,7 @@ package bgu.spl.mics.application.passiveObjects;
  * You may add fields and methods to this class as you see fit (including public methods).
  */
 public class Ewok {
-	int serialNumber;
+	private int serialNumber;
 	boolean available;
 	//singelton
     public Ewok(int serialNumber){

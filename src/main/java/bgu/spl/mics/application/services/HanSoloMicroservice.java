@@ -27,6 +27,7 @@ public class HanSoloMicroservice extends MicroService {
         subscribeBroadcast(TerminateMissionBroadcast.class, c -> {
             Diary.getInstance().setHanSoloTerminate(System.currentTimeMillis());
             terminate();});
+
         subscribeEvent(AttackEvent.class, c -> {
             Iterator<Integer> serialsIterator = c.getSerialsIterator();
             // getSerialsIterator() passes in sorted order in order to avoid deadlocks --> @INV: AttackEvent.serials is a sorted list
@@ -40,14 +41,18 @@ public class HanSoloMicroservice extends MicroService {
                 System.out.println("Han Solo attacks");
                 Thread.sleep(c.getDuration());
                 System.out.println("Han Solo finished");
+
                 complete(c, true);
+
+                // document
                 Diary.getInstance().setHanSoloFinish(System.currentTimeMillis()); // overrides each time stamp until the leas one is executing
                 Diary.getInstance().incrementTotalAttacks();
+
+                // release() notify all threads that are blocked (by trying to acquire a occupied ewok) that this ewok can now be acquired
                 serialsIterator = c.getSerialsIterator();
                 while (serialsIterator.hasNext()){
                     Integer currSerialToRelease = serialsIterator.next();
                     Ewoks.getInstance().getEwoks().get(currSerialToRelease - 1).release();
-                    // release() notify all threads that are blocked (by trying to acquire a occupied ewok) that this ewok can now be acquired
                 }
 
             } catch (InterruptedException e){

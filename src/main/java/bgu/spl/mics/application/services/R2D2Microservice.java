@@ -24,11 +24,14 @@ public class R2D2Microservice extends MicroService {
         subscribeBroadcast(TerminateMissionBroadcast.class, c -> {
             Diary.getInstance().setR2D2Terminate(System.currentTimeMillis());
             terminate();});
+
         subscribeEvent(DeactivationEvent.class, c -> {
             try{
+
                 Thread.sleep(c.getDuration());
                 complete(c, true);
                 Diary.getInstance().setR2D2Deactivate(System.currentTimeMillis());
+
             }catch (InterruptedException e){
                 e.printStackTrace();
             }

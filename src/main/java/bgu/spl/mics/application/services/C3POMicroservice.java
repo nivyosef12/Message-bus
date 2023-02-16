@@ -27,6 +27,7 @@ public class C3POMicroservice extends MicroService {
         subscribeBroadcast(TerminateMissionBroadcast.class, c -> {
             Diary.getInstance().setC3POTerminate(System.currentTimeMillis());
             terminate();});
+
         subscribeEvent(AttackEvent.class, c -> {
             Iterator<Integer> serialsIterator = c.getSerialsIterator();
             // getSerialsIterator() passes in sorted order in order to avoid deadlocks --> @INV: AttackEvent.serials is a sorted list
@@ -40,15 +41,20 @@ public class C3POMicroservice extends MicroService {
                 System.out.println("C3PO attacks");
                 Thread.sleep(c.getDuration());
                 System.out.println("C3PO finished");
+
                 complete(c, true);
+
+                // document
                 Diary.getInstance().setC3POFinish(System.currentTimeMillis()); // overrides each time stamp until the leas one is executing
                 Diary.getInstance().incrementTotalAttacks();
+
+                // release() notify all threads that are blocked (by trying to acquire a occupied ewok) that this ewok can now be acquired
                 serialsIterator = c.getSerialsIterator();
                 while (serialsIterator.hasNext()){
                     Integer currSerialToRelease = serialsIterator.next();
                     Ewoks.getInstance().getEwoks().get(currSerialToRelease - 1).release();
-                    // release() notify all threads that are blocked (by trying to acquire a occupied ewok) that this ewok can now be acquired
                 }
+
             } catch (InterruptedException e){
                 e.printStackTrace();
             }

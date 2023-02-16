@@ -27,18 +27,24 @@ public class Main {
 		try {
 			inputPath = "C:\\Users\\nivyo\\OneDrive\\שולחן העבודה\\github_projects\\Message-bus\\input.json";
 			outputPath = "C:\\Users\\nivyo\\OneDrive\\שולחן העבודה\\github_projects\\Message-bus\\output.json";
+
+			// parse input
 			Input input = JsonInputReader.getInputFromJson(inputPath);
+
+			// initialize micro services
 			MicroService C3P0 = new C3POMicroservice();
 			MicroService HanSolo = new HanSoloMicroservice();
 			LandoMicroservice Lando = new LandoMicroservice();
 			R2D2Microservice R2D2 = new R2D2Microservice();
 			LeiaMicroservice Leia = new LeiaMicroservice(input.getAttacks(), input.getR2D2(), input.getLando());
+
 			Diary diary = Diary.getInstance();
-			Ewoks ewoks = Ewoks.getInstance();
+			Ewoks ewoks = Ewoks.getInstance(); // get ewoks (for the attack events) singleton
 			for(int i = 1; i <= input.getEwoks(); i++){
 				Ewok ewok = new Ewok(i);
 				ewoks.addEwok(ewok);
 			}
+
 			Thread c3poThread = new Thread(C3P0);
 			Thread hanSoloThread = new Thread(HanSolo);
 			Thread r2d2Thread = new Thread(R2D2);
@@ -49,6 +55,7 @@ public class Main {
 			r2d2Thread.start();
 			landoThread.start();
 			leiaThread.start();
+
 			try{ // wait until all threads will finish their run method (until a terminate broadcast is sent)
 				c3poThread.join();
 				hanSoloThread.join();
