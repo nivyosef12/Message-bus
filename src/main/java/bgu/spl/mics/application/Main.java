@@ -25,6 +25,8 @@ public class Main {
 		String outputPath = scanner.nextLine();
 		countDownLatch = new CountDownLatch(4);
 		try {
+			inputPath = "C:\\Users\\nivyo\\OneDrive\\שולחן העבודה\\github_projects\\Message-bus\\input.json";
+			outputPath = "C:\\Users\\nivyo\\OneDrive\\שולחן העבודה\\github_projects\\Message-bus\\output.json";
 			Input input = JsonInputReader.getInputFromJson(inputPath);
 			MicroService C3P0 = new C3POMicroservice();
 			MicroService HanSolo = new HanSoloMicroservice();
